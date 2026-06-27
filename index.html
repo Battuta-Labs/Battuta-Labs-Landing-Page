@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battuta Labs</title>
+  <meta name="description" content="Battuta Labs — a dev shop exploring the frontiers. Privacy-first mobile apps for communities that matter." />
+  <!-- Paste Google Search Console verification meta tag here -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+
+    main { flex: 1; }
+
+    /* Hero */
+    .hero {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 6rem 2rem 4rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 440px;
+      line-height: 1.65;
+    }
+
+    /* Products */
+    .products {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+    }
+
+    .product-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.5rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .product-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(26,107,60,0.08);
+    }
+
+    .product-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 13px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    .product-info { flex: 1; }
+
+    .product-info h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .product-info p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
+    .platform-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+    }
+
+    .arrow {
+      font-size: 1.2rem;
+      color: var(--muted);
+      align-self: center;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 520px) {
+      .hero { padding: 4rem 1.25rem 3rem; }
+      .products { padding: 0 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="logo" href="/">Battuta<span class="labs">Labs</span></a>
+    <a class="nav-link" href="mailto:hello@battutalabs.dev">hello@battutalabs.dev</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>A dev shop exploring<br>the <em>frontiers</em>.</h1>
+      <p>We build privacy-first mobile apps for communities that matter. Small team. Deliberate work.</p>
+    </section>
+
+    <section class="products">
+      <p class="section-label">Products</p>
+      <a class="product-card" href="muslimprayernudge/">
+        <div class="product-icon">🕌</div>
+        <div class="product-info">
+          <h2>Muslim Prayer Nudge</h2>
+          <p>The prayer companion that nudges you when it matters most.</p>
+          <span class="platform-tag">Android · iOS</span>
+        </div>
+        <span class="arrow">›</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Battuta Labs LLC. All rights reserved.</p>
+    <nav class="footer-links">
+      <a href="mailto:hello@battutalabs.dev">hello@battutalabs.dev</a>
+    </nav>
+  </footer>
+
+</body>
+</html>

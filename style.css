@@ -1,0 +1,111 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #1a6b3c;
+  --accent-light: #e8f5ee;
+  --border: #e8e8e8;
+  --card: #f9f9f9;
+
+  --app-bg: #0F1C3F;
+  --app-card: #1B2E6B;
+  --app-gold: #C9A84C;
+  --app-text: #D9D9D9;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ── Nav ── */
+.site-nav {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav.dark {
+  border-bottom-color: rgba(255,255,255,0.1);
+  background: var(--app-bg);
+}
+
+.logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.logo .labs { color: var(--accent); }
+
+.site-nav.dark .logo { color: #fff; }
+.site-nav.dark .logo .labs { color: var(--app-gold); }
+
+.nav-link {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-link:hover { color: var(--text); }
+.site-nav.dark .nav-link { color: rgba(255,255,255,0.6); }
+.site-nav.dark .nav-link:hover { color: #fff; }
+
+/* ── Footer ── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-footer.dark {
+  border-top-color: rgba(255,255,255,0.1);
+  background: var(--app-bg);
+}
+
+.site-footer p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.site-footer.dark p { color: rgba(255,255,255,0.4); }
+
+.footer-links { display: flex; gap: 1.25rem; }
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover { color: var(--text); }
+.site-footer.dark .footer-links a { color: rgba(255,255,255,0.4); }
+.site-footer.dark .footer-links a:hover { color: #fff; }
+
+/* ── Utilities ── */
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 520px) {
+  .site-nav, .site-footer { padding: 1rem 1.25rem; }
+  .site-footer { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; }
+}
